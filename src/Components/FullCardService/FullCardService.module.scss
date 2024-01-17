@@ -1,0 +1,351 @@
+
+
+
+
+.root{
+    position: relative;
+    color: #fff;
+    margin: 100px auto;
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        flex-direction: row-reverse;
+        margin-bottom: 30px;
+        .image{
+            border-radius: 20px;
+            border: 2px solid #fff;
+        }
+        .types{
+            font-size: 20px;
+        }
+        .main__leftBLock{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+            justify-content: center;
+            .main__title{
+                text-transform: uppercase;
+                line-break: 200px;
+            }
+            button{
+                margin-top: 50px;
+                width: 250px;
+                height: 60px;
+                background: #069726;
+                cursor: pointer;
+                border: none;
+                border-radius: 20px;
+                font-size: 26px;
+                font-weight: 700;
+                color: #fff;
+                animation: btn 3s normal infinite;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    background: darken(#069726, 5%);
+                }
+            }
+
+            .main__price{
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+        }
+
+    }
+
+
+
+    
+    .description{
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+
+    .service__title{
+        color: #069726;
+        font-size: 36px;
+        margin-top: 30px;
+    }
+
+    .service__list{
+        margin: 30px 0;
+
+
+        li{
+            list-style: square inside;
+            margin: 15px 0;
+            font-size: 18px;
+
+            &::marker{
+                color: #069726;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .advantage{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &__title{
+            color: #069726;
+            color: #069726;
+
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 22px;
+
+            &__item{
+            display: flex;
+            gap: 10px;
+                 svg {
+                width: 30px;
+                height: 30px;
+                fill: #069726;
+            }
+            }
+        }
+    }
+
+}
+
+.slider__title{
+    font-size: 36px;
+    font-weight: 700;
+    color: #069726;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.sliderBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .slider__container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        
+
+        .slider__inner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 50px;
+            
+            transition: opacity ease-in-out;
+
+            .fade-out {
+                opacity: 0;
+            }
+            
+            .fade-in {
+                opacity: 1;
+            }
+        }
+}
+
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+        svg{
+            path{
+                fill: #ffffff9b;
+                &:hover{
+                    fill: #fff;
+                }
+                &:active{
+                    fill: #069726;
+                }
+            }
+        }
+
+    }
+
+    img{
+        border-radius: 70px;
+    }
+
+
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .root{
+        .main{
+            gap: 50px;
+
+            .image{
+                width: 50%;
+                height: inherit;
+            }
+        }
+        .description{
+            padding: 10px;
+        }
+        .service__title{
+            margin-left: 10px;
+        }
+        .service__list{
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .advantage__title{
+            margin-left: 10px;
+        }
+        .advantage__list{
+            padding: 15px;
+            margin: 10px 0;
+        }
+    }
+   
+}
+
+
+
+@media (max-width: 900px) {
+    .root{
+        .main{
+            flex-direction: column-reverse;
+            .image{
+                width: 90%;
+                height: inherit;
+            }
+    }
+}
+.sliderBlock{
+    .slider__container{
+        img{
+            width: inherit;
+            height: 600px;
+        }
+    }
+}
+    
+}
+
+@media (max-width: 750px) {
+    .sliderBlock{
+        .slider__container{
+            img{
+                width: inherit;
+                height: 500px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .root{
+
+    
+        .main{
+            flex-direction: column;
+            .image{
+                height: 280px;
+                width: inherit;
+            }
+            &__title{
+                font-size: 36px;
+            }
+        }
+
+    }
+    .sliderBlock{
+        .slider__container{
+            img{
+                width: inherit;
+                height: 450px;
+            }
+            button{
+                position: absolute;
+                bottom: 0;
+
+                &:last-child{
+                    right: 30%;
+                }
+                
+                &:first-child{
+                    left: 30%;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+    .root{
+
+    
+        .main{
+            flex-direction: column;
+            .image{
+                width: 90vw;
+                height: 300px;
+            }
+        }
+
+    }
+
+    .sliderBlock{
+        .slider__container{
+            .slider__inner{
+                padding: 0;
+            }
+            img{
+                width: 90vw;
+                height: 350px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@keyframes btn {
+    0%{
+        opacity: .7;
+        transform: scale(1.01);
+    }
+    25%{
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    75%{
+        opacity: .7;
+        transform: scale(1.02);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

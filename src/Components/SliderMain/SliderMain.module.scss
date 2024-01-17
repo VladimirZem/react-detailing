@@ -1,0 +1,107 @@
+.slide {
+    position: relative;
+    color: #fff;
+    width: 100vw;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+
+    .slide__arrow__right {
+        position: absolute;
+        top: 10rem;
+        right: 2rem;
+        cursor: pointer;
+
+    }
+
+    .slide__arrow__left {
+        position: absolute;
+        top: 10rem;
+        left: 2rem;
+        cursor: pointer;
+    }
+
+    .slide__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 25rem;
+        gap: 70px;
+
+        .title__slide {
+            text-align: center;
+            width: 70%;
+            height: 180px;
+            text-transform: uppercase;
+            padding-bottom: 70px;
+            border-bottom: 2px solid #FF0000;
+            font-size: 40px;
+
+        }
+
+
+        .description__block__sldie {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            text-transform: uppercase;
+            font-size: 20px;
+
+            p {
+                text-align: center;
+                width: 50%;
+                padding: 10px
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px){
+
+    svg{
+        width: 40px;
+    }
+    .slide__inner{
+        .description__block__sldie{
+            p{
+                font-size: 16px;
+            };
+        }
+    }
+}
+
+
+@media(max-width: 700px){
+       .slide{
+        .slide__inner{
+            .title__slide{
+                font-size: 32px;
+                padding-bottom: 70px;
+                width: 60%;
+            }
+        }
+       }
+}
+
+@media(max-width: 500px){
+    .slide{
+     .slide__inner{
+         .title__slide{
+             font-size: 26px;
+             padding-bottom: 0px;
+         }
+         .description__block__sldie{
+            p{
+                font-size: 13px;
+                
+            };
+        }
+     }
+
+    }
+
+}
